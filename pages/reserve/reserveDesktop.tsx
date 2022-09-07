@@ -113,7 +113,7 @@ export const ReserveDesktop = () => {
                             We bakken op <span className={styles.titleHighlight}> 24 augustus</span>
                         </p>
                         <p>
-                            Er zijn nog <span className={styles.titleHighlight}> 26 pizza`&#39;`,s </span>
+                            Er zijn nog <span className={styles.titleHighlight}> 26 pizza&#39;s </span>
                         </p>
                         <Progress percent={50} showInfo={false} strokeWidth={20} strokeColor={"#FFB800"} trailColor={"#FFDC82"}/>
                     </div>
@@ -137,14 +137,14 @@ export const ReserveDesktop = () => {
                         </div>
 
                         <div className={styles.inputContainer}>
-                            <label className={styles.inputTitle}>Pizza`&#39;`,s</label>
+                            <label className={styles.inputTitle}>Pizza&#39;s</label>
                             <Button className={styles.pizzaButton} onClick={() => showModal(true)}>
                                 <div className={styles.pizzaButtonContainer}>
                                     {pizzas.length > 0 ?
                                         <span className={styles.pizzaButtonText}>{`(${pizzas.length}) ${pizzaString}`}</span>
                                         :
                                         <span className={styles.pizzaButtonText}>
-                                Klik hier om uw pizza`&#39;`,s te selecteren</span>
+                                Klik hier om uw pizza&#39;s te selecteren</span>
                                     }
                                     <FontAwesomeIcon icon={faPizzaSlice} className={styles.pizzaButtonIcon}/>
                                 </div>
@@ -167,7 +167,7 @@ export const ReserveDesktop = () => {
                                     <>
                                 <FontAwesomeIcon icon={faCircleExclamation} color={"#FFB800"} size={"xl"}
                                                  style={{marginRight: ".1rem !important"}}/>
-                                <span style={{marginLeft: ".2rem"}}>Kies eerst uw pizza`&#39;`,s voor het tijdstip</span>
+                                <span style={{marginLeft: ".2rem"}}>Kies eerst uw pizza&#39;s voor het tijdstip</span>
                                     </> : <></>}
                             </div>
                         </div>
