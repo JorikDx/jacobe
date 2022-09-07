@@ -1,0 +1,20 @@
+.body{
+    height: 100vh;
+    width: 100%;
+}
+
+.exit{
+    justify-content: flex-start;
+    /*font-size: 36px;*/
+    color: #FFB800;
+    margin-left: 1rem
+}
+
+.menuContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 32px;
+    height: 60%;
+    justify-content: space-around;
+}

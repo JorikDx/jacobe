@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerIcon{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    color: #FFB800;
+    font-size: 2rem;
+    transition: all 0.2s ease-in-out ;
+}
+
+.footerIcon:hover{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    color: #ff9900;
+    cursor: pointer;
+    font-size: 2.5rem;
+}

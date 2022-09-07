@@ -1,0 +1,209 @@
+.container {
+    padding: 0 2rem;
+}
+
+.main {
+    min-height: 100vh;
+    padding: 2rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background: #ff9900 !important;
+}
+
+.checkBox{
+    margin-top: 2rem;
+    align-self: center;
+    font-size: 16px;
+}
+
+.modalStyle .ant-modal-header {
+    border-radius: 20px 20px 0 0;
+}
+
+.newStyle {
+    border-radius: 20px;
+}
+
+.ant-modal-content {
+    border-radius: 20px;
+}
+
+.modalStyle2 {
+    border-radius: 20px;
+}
+
+.modalStyle .ant-modal-content {
+    background-color: #01579b;
+}
+
+
+.reserveButtonContainer {
+    font-size: 19px !important;
+    font-weight: 500 !important;
+    font-family: Rubik, sans-serif !important;
+    color: #ffffff !important;
+    display: grid !important;
+}
+
+.reserveButton {
+    background: #FFB800 !important;
+    color: white !important;
+    width: 100% !important;
+    height: 50px !important;
+    border-radius: 30px !important;
+    border: 1px solid #FFB800 !important;
+    margin-top: 3rem !important;
+}
+
+.reserveButton:hover {
+    background: #ff9900 !important;
+    outline: none !important;
+    border: 1px solid #ff9900 !important;
+}
+
+
+.dropdownGroup {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.dropdown {
+    width: 60% !important;
+    height: 50px !important;
+    border-radius: 30px !important;
+    border: 4px solid #FFB800 !important;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px !important;
+    padding-left: 1rem !important;
+    margin-right: 1rem !important;
+}
+
+.dropdown:hover, .dropdown:focus {
+    border: 4px solid #ff9900 !important;
+    outline: none !important;
+    cursor: pointer !important;
+}
+
+.dropdown:disabled {
+    border: 4px solid #ebebeb !important;
+    cursor: auto !important;
+    background: #f7f7f7 !important;
+}
+
+.pizzaButton {
+    border: 1px solid #FFB800 !important;
+    height: 50px !important;
+    width: 100% !important;
+    border-radius: 30px !important;
+    font-size: 32px !important;
+    color: #ffffff !important;
+    background: #FFB800 !important;
+}
+
+.pizzaButton:hover {
+    border: 1px solid #FFB800 !important;
+    background: #ff9900 !important;
+    transition: all 0.2s ease-in-out !important;
+    cursor: pointer !important;
+}
+
+.pizzaButtonContainer {
+    font-size: 16px !important;
+    font-size: 4vw !important;
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    display: grid !important;
+}
+
+.pizzaButtonText {
+    grid-row: 1 !important;
+    justify-self: end !important;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.pizzaButtonIcon {
+    grid-row: 1 !important;
+    justify-self: center !important;
+    align-self: center !important;
+}
+
+.formInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.inputContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.inputTitle {
+    font-weight: 500 !important;
+    font-size: 19px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 1rem !important;
+}
+
+.inputTitleDisabled {
+    font-weight: 500 !important;
+    font-size: 19px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 1rem !important;
+}
+
+.input {
+    border: 4px solid #FFB800 !important;
+    height: 50px !important;
+    width: 100% !important;
+    transition: all 0.2s ease-in-out !important;
+    border-radius: 30px !important;
+    font-size: 20px !important;
+    padding-left: 1rem !important;
+    font-family: Rubik, sans-serif;
+}
+
+.input:focus {
+    border: 4px solid #ff9900 !important;
+    outline: none !important;
+    box-shadow: 0 0 2px 2px #bebebe;
+    transition: all 0.2s ease-in-out;
+}
+
+.input:hover {
+    border: 4px solid #ff9900 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.titleHighlight {
+    font-weight: bold;
+    color: #FFB800;
+}
+
+.title,
+.description {
+    text-align: center;
+}
+
+
+

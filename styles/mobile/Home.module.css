@@ -1,0 +1,98 @@
+.container {
+
+}
+
+.wrapper {
+  min-height: calc(100vh);
+  background-image: url("/homeBackgroundMobile.png");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  min-height: calc(100vh - 50px);
+}
+.contentContainer {
+  /* Full height */
+
+  /* Center and scale the image nicely */
+  color: #fafafa;
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  /*display: flex;*/
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: space-around;*/
+
+}
+
+.titleContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10%;
+}
+
+.bottomBackground {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #FFDC82 no-repeat center;
+  height: 100%;
+  width: 30%;
+}
+
+.title{
+  font-size: 40px;
+  color: #FFB800;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+.subtitle{
+  font-size: 32px;
+  color: #FFD361;
+  font-weight: bolder;
+  margin-top: 0;
+}
+
+
+.button{
+  color: #fafafa;
+  outline-color: #fafafa;
+  border-color: #fafafa;
+}
+
+.pizza{
+  align-self: center !important;
+  padding: 20px;
+}
+
+.socials{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.reserveButton {
+  width: 80%;
+  height: 56px;
+  background: #FFB800;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+}
+
+.reserveButton:hover,
+.reserveButton:focus {
+  background: #ff9900;
+  color: white;
+  border: none;
+}

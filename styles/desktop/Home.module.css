@@ -1,0 +1,92 @@
+.container {
+
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-image: url("/homeBackground.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.main {
+  /* Full height */
+  min-height: calc(100vh - 70px);
+  /* Center and scale the image nicely */
+  color: #fafafa;
+  padding-bottom: 4rem;
+  display: flex;
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  align-items: center;
+  /*justify-content: space-around;*/
+
+}
+
+.titleContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10%;
+}
+
+.bottomBackground {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #FFDC82 no-repeat center;
+  height: 100%;
+  width: 30%;
+}
+
+.title{
+  font-size: 72px;
+  color: #FFB800;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+.subtitle{
+  font-size: 48px;
+  color: #FFD361;
+  font-weight: bolder;
+  margin-top: 0;
+}
+
+
+.button{
+  color: #fafafa;
+  outline-color: #fafafa;
+  border-color: #fafafa;
+}
+
+.pizza{
+  align-self: center !important;
+  padding: 20px;
+}
+
+.socials{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.reserveButton {
+  width: 290px;
+  height: 70px;
+  background: #FFB800;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  margin-top: 1rem;
+}
+
+.reserveButton:hover,
+.reserveButton:focus {
+  background: #ff9900;
+  color: white;
+  border: none;
+}

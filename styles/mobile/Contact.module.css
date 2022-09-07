@@ -1,0 +1,118 @@
+.body {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper {
+    min-height: 100vh;
+}
+
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.infoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.infoIcon {
+    margin-right: 1rem;
+    color: #FFB800;
+}
+
+.infoContainer {
+    display: flex !important;
+    flex-direction: row !important;
+    margin-top: 2rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contactTitle {
+    font-size: 32px;
+    text-decoration: underline;
+    text-decoration-color: #FFB800;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+
+.sendIcon {
+    margin-left: .5rem;
+}
+
+.sendButton {
+    width: 100%;
+    height: 50px;
+    background: #FFB800;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+    margin-top: 2rem;
+}
+
+.sendButton:hover,
+.sendButton:focus {
+    background: #ff9900;
+    color: white;
+    border: none;
+}
+
+
+.inputContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.inputTitle {
+    font-weight: 500 !important;
+    font-size: 19px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 1rem !important;
+}
+
+.inputTitleDisabled {
+    font-weight: 500 !important;
+    font-size: 19px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 1rem !important;
+}
+
+.input {
+    border: 4px solid #FFB800 !important;
+    height: 50px !important;
+    width: 100% !important;
+    transition: all 0.2s ease-in-out !important;
+    border-radius: 30px !important;
+    font-size: 20px !important;
+    padding-left: 1rem !important;
+    font-family: Rubik, sans-serif;
+}
+
+.input:focus {
+    border: 4px solid #ff9900 !important;
+    outline: none !important;
+    box-shadow: 0 0 2px 2px #bebebe;
+    transition: all 0.2s ease-in-out;
+}
+
+.input:hover {
+    border: 4px solid #ff9900 !important;
+    transition: all 0.2s ease-in-out;
+}
+

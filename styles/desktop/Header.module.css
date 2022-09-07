@@ -1,0 +1,77 @@
+.container {
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    /*grid-template-columns: 1fr 2fr 1fr;*/
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.logo {
+    cursor: pointer;
+    color: #ff9900;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menuItemSelected {
+    font-weight: bold;
+}
+
+.menuItem {
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+
+.menuItem:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reserveButtonSelected:disabled,
+.reserveButton:disabled:hover {
+    width: 290px;
+    height: 70px;
+    background: #ff9900;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+}
+
+
+.reserveButton {
+    width: 290px;
+    height: 70px;
+    background: #FFB800;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+}
+
+.reserveButton:hover,
+.reserveButton:focus {
+    background: #ff9900;
+    color: white;
+    border: none;
+}
+
+.reserveContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
