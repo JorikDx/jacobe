@@ -106,3 +106,4 @@ export const MenuMobile = () => {
         </>
     )
 }
+export default MenuMobile

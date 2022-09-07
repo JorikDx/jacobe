@@ -43,3 +43,4 @@ export const HomeDesktop = () =>{
         </>
     )
 }
+export default HomeDesktop

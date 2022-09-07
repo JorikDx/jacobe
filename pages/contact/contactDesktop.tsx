@@ -70,3 +70,4 @@ export const ContactDesktop = () => {
         </>
     )
 }
+export default ContactDesktop

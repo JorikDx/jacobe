@@ -51,3 +51,4 @@ export const AboutUsDesktop = () =>{
         </>
     )
 }
+export default AboutUsDesktop

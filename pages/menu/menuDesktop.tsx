@@ -104,3 +104,4 @@ export const MenuDesktop = () => {
         </>
     )
 }
+export default MenuDesktop

@@ -72,3 +72,4 @@ export const ContactMobile = () => {
         </>
     )
 }
+export default ContactMobile

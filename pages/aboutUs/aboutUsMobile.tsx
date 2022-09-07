@@ -54,3 +54,4 @@ export const AboutUsMobile = () => {
         </>
     )
 }
+export default AboutUsMobile
