@@ -46,18 +46,24 @@ export const ContactDesktop = () => {
                 Info
             </span>
                         <div className={styles.infoForm}>
+                            <a href={"https://wa.me/31655025356"}>
                             <div className={styles.infoContainer}>
                                 <FontAwesomeIcon icon={faWhatsapp} size={"2x"} className={styles.infoIcon}/>
                                 <span>06-55025356</span>
                             </div>
+                            </a>
+                            <a href={"https://www.instagram.com/jacobe_pizza/"}>
                             <div className={styles.infoContainer}>
                                 <FontAwesomeIcon icon={faInstagram} size={"2x"} className={styles.infoIcon}/>
                                 <span>@jacobe_pizza</span>
                             </div>
-                            <div className={styles.infoContainer}>
+                            </a>
+                            <a href={"mailto:jacobee.socialmedia@gmail.com"}>
+                            <div className={styles.infoContainer} >
                                 <FontAwesomeIcon icon={faEnvelope} size={"2x"} className={styles.infoIcon}/>
                                 <span>jacobee@gmail.com</span>
                             </div>
+                            </a>
                             <div className={styles.infoContainer}>
                                 <FontAwesomeIcon icon={faLocationDot} size={"2x"} style={{paddingLeft: ".5rem", marginRight : "1.3rem"}}/>
                                 <span>Zie reservering</span>

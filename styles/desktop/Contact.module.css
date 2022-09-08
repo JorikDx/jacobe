@@ -38,6 +38,11 @@
     font-weight: bold;
     color: white;
     align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.infoContainer:hover{
+    color: #ff9900;
 }
 
 .contactTitle {

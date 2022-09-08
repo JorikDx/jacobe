@@ -7,9 +7,9 @@ import React from "react";
 export const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <FontAwesomeIcon className={styles.footerIcon} icon={faInstagram}/>
-            <FontAwesomeIcon className={styles.footerIcon} icon={faWhatsapp}/>
-            <FontAwesomeIcon className={styles.footerIcon} icon={faEnvelope}/>
+            <a href={"https://www.instagram.com/jacobe_pizza/"}><FontAwesomeIcon className={styles.footerIcon} icon={faInstagram}/></a>
+            <a href={"https://wa.me/31655025356"}><FontAwesomeIcon className={styles.footerIcon}  icon={faWhatsapp}/></a>
+            <a href={"mailto:jacobee.socialmedia@gmail.com"}><FontAwesomeIcon className={styles.footerIcon}  icon={faEnvelope}/></a>
         </footer>
     )
 }

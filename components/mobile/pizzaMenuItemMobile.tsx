@@ -24,7 +24,7 @@ export const PizzaMenuItemMobile = (props: PizzaMenuItemProps) => {
                 </div>
             </div>
             <div>
-                <Image src={pizza.imageSource || "pizza.png"} width={"150px"} height={"150px"}/>
+                <Image src={pizza.imageSource || "pizza.png"} width={"150px"} preview={false} height={"150px"}/>
             </div>
         </div>
 
