@@ -83,12 +83,14 @@
     font-size: 20px !important;
     padding-left: 1rem !important;
     margin-right: 1rem !important;
+    background: white !important;
 }
 
 .dropdown:hover, .dropdown:focus {
     border: 4px solid #ff9900 !important;
     outline: none !important;
     cursor: pointer !important;
+    background: white !important;
 }
 
 .dropdown:disabled {
