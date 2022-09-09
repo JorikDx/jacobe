@@ -17,14 +17,14 @@ export const PizzaMenuItemMobile = (props: PizzaMenuItemProps) => {
     return (
         <div className={styles.container}>
             <div className={styles.description}>
-            <span className={styles.title}>{pizza.name} {pizza.vegan ? <FontAwesomeIcon icon = {faLeaf} color={"#22bb88"}/>: <></>}</span>
-            <span className={styles.ingredients}>{pizza.ingredients}</span>
+            <span className={styles.title}>{pizza!.name} {pizza!.vegan ? <FontAwesomeIcon icon = {faLeaf} color={"#22bb88"}/>: <></>}</span>
+            <span className={styles.ingredients}>{pizza!.ingredients}</span>
                 <div>
-            <span className={styles.euro}>€</span><span className={styles.price}>{pizza.price}</span>
+            <span className={styles.euro}>€</span><span className={styles.price}>{pizza!.price}</span>
                 </div>
             </div>
             <div>
-                <Image src={pizza.imageSource || "pizza.png"} width={"150px"} preview={false} height={"150px"}/>
+                <Image src={pizza!.imageSource || "pizza.png"} width={"150px"} preview={false} height={"150px"}/>
             </div>
         </div>
 

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styles from "/styles/mobile/Menu.module.css";
 import {Pizza} from "../../types";
 import {PizzaMenuItemMobile} from "../../components/mobile/pizzaMenuItemMobile";
@@ -98,10 +98,14 @@ export const MenuMobile = (props: MenuProps) => {
                 vegan: false
             }]
 
-    const [pizzaMenu, setPizzaMenu] = useState<Pizza[]>(pizzas)
+    const [pizzaMenu, setPizzaMenu] = useState<Pizza[]>(pizzaExamples)
     const updatePizzaMenu = (pizzas: Pizza[]) => {
         setPizzaMenu(pizzas)
     }
+
+    useEffect(()=>{
+        setPizzaMenu(pizzas)
+    },[pizzas])
     return (
         <>
             <Head>

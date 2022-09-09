@@ -94,7 +94,7 @@ export const MenuDesktop = (props: MenuProps) => {
                 vegan: false
             }]
 
-    const [pizzaMenu, setPizzaMenu] = useState<Pizza[]>(pizzas)
+    const [pizzaMenu, setPizzaMenu] = useState<Pizza[]>(pizzaExamples)
     const updatePizzaMenu = (pizzas: Pizza[]) => {
         setPizzaMenu(pizzas)
     }
