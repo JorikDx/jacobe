@@ -27,12 +27,14 @@ export const ReserveMobile = () => {
         updateTimeSlots(updatedPizzas)
         let tempPizzaString = ""
         updatedPizzas.forEach((pizza) => {
-            if (updatedPizzas.indexOf(pizza) === updatedPizzas.length-1){
+            if (updatedPizzas.indexOf(pizza) === updatedPizzas.length-1 && pizza !== null){
                 tempPizzaString += pizza.nickname
                 setPizzaString(tempPizzaString)
             }else{
-                tempPizzaString += pizza.nickname + ", "
-                setPizzaString(tempPizzaString)
+                if (pizza !== null) {
+                    tempPizzaString += pizza.nickname + ", "
+                    setPizzaString(tempPizzaString)
+                }
             }
         })
     }
@@ -43,41 +45,49 @@ export const ReserveMobile = () => {
         const today = new Date(Date.now())
         return(
             [{
+                id: "1",
                 startTime: new Date(today.setHours(17, 0)),
                 endTime: new Date(today.setHours(17, 15)),
                 availablePizzas: 2
             },
                 {
+                    id: "2",
                     startTime: new Date(today.setHours(17, 15)),
                     endTime: new Date(today.setHours(17, 30)),
                     availablePizzas: 4
                 },
                 {
+                    id: "3",
                     startTime: new Date(today.setHours(17, 30)),
                     endTime: new Date(today.setHours(17, 45)),
                     availablePizzas: 1
                 },
                 {
+                    id: "4",
                     startTime: new Date(today.setHours(17, 45)),
                     endTime: new Date(today.setHours(18, 0)),
                     availablePizzas: 2
                 },
                 {
+                    id: "5",
                     startTime: new Date(today.setHours(18, 0)),
                     endTime: new Date(today.setHours(18, 15)),
                     availablePizzas: 3
                 },
                 {
+                    id: "6",
                     startTime: new Date(today.setHours(18, 15)),
                     endTime: new Date(today.setHours(18, 30)),
                     availablePizzas: 4
                 },
                 {
+                    id: "7",
                     startTime: new Date(today.setHours(18, 30)),
                     endTime: new Date(today.setHours(18, 45)),
                     availablePizzas: 2
                 },
                 {
+                    id: "8",
                     startTime: new Date(today.setHours(18, 45)),
                     endTime: new Date(today.setHours(19, 0)),
                     availablePizzas: 2

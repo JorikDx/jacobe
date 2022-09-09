@@ -7,9 +7,17 @@ import {HeaderMobile} from "../../components/mobile/header";
 import {HeaderOption} from "../../components/header";
 import {FooterMobile} from "../../components/mobile/footer";
 
-export const MenuMobile = () => {
+export type MenuProps = {
+    pizzas: Pizza[]
+}
+
+export const MenuMobile = (props: MenuProps) => {
+    const {
+        pizzas
+    } = props
     const pizzaExamples: Pizza[] =
         [{
+            id: "1",
             name: "Margherita",
             ingredients: "Tomatensaus, Mozarella, Basilicum",
             imageSource: "pizzaMargherita.png",
@@ -18,6 +26,7 @@ export const MenuMobile = () => {
             vegan: true
         },
             {
+                id: "2",
                 name: "Prociuto",
                 ingredients: "Tomatensaus, Mozarella, Ham",
                 imageSource: "pizza.png",
@@ -26,6 +35,7 @@ export const MenuMobile = () => {
                 vegan: false
             },
             {
+                id: "3",
                 name: "Salame",
                 ingredients: "Tomatensaus, Mozarella, Spinata Romana",
                 imageSource: "pizzaSalame.png",
@@ -34,6 +44,7 @@ export const MenuMobile = () => {
                 vegan: false
             },
             {
+                id: "4",
                 name: "Margherita",
                 ingredients: "Tomatensaus, Mozarella, Basilicum",
                 imageSource: "pizzaMargherita.png",
@@ -42,6 +53,7 @@ export const MenuMobile = () => {
                 vegan: true
             },
             {
+                id: "5",
                 name: "Prociuto",
                 ingredients: "Tomatensaus, Mozarella, Ham",
                 imageSource: "pizza.png",
@@ -50,6 +62,7 @@ export const MenuMobile = () => {
                 vegan: false
             },
             {
+                id: "6",
                 name: "Salame",
                 ingredients: "Tomatensaus, Mozarella, Spinata Romana",
                 imageSource: "pizzaSalame.png",
@@ -58,6 +71,7 @@ export const MenuMobile = () => {
                 vegan: false
             },
             {
+                id: "7",
                 name: "Margherita",
                 ingredients: "Tomatensaus, Mozarella, Basilicum",
                 imageSource: "pizzaMargherita.png",
@@ -66,6 +80,7 @@ export const MenuMobile = () => {
                 vegan: true
             },
             {
+                id: "8",
                 name: "Prociuto",
                 ingredients: "Tomatensaus, Mozarella, Ham",
                 imageSource: "pizza.png",
@@ -74,6 +89,7 @@ export const MenuMobile = () => {
                 vegan: false
             },
             {
+                id: "9",
                 name: "Salame",
                 ingredients: "Tomatensaus, Mozarella, Spinata Romana",
                 imageSource: "pizzaSalame.png",
@@ -82,7 +98,7 @@ export const MenuMobile = () => {
                 vegan: false
             }]
 
-    const [pizzaMenu, setPizzaMenu] = useState<Pizza[]>(pizzaExamples)
+    const [pizzaMenu, setPizzaMenu] = useState<Pizza[]>(pizzas)
     const updatePizzaMenu = (pizzas: Pizza[]) => {
         setPizzaMenu(pizzas)
     }

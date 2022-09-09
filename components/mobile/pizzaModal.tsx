@@ -37,9 +37,9 @@ export const PizzaModalMobile = (props : PizzaModalProps) => {
 
 
 
-    const removePizza = (index: number) => {
+    const removePizza = (pizza: Pizza) => {
         let tempPizzas = pizzas
-        tempPizzas.splice(index, 1)
+        tempPizzas.splice(tempPizzas.indexOf((pizza)), 1)
         setPizzas(tempPizzas)
         setAmount(pizzas.length)
     }
@@ -48,6 +48,7 @@ export const PizzaModalMobile = (props : PizzaModalProps) => {
             pizzas.push(pizza)
             setPizzas(pizzas)
         setAmount(pizzas.length)
+        console.log("pizzas", pizzas)
     }
 
     const Footer = () => {
@@ -68,11 +69,11 @@ export const PizzaModalMobile = (props : PizzaModalProps) => {
             <div className={styles.container}>
             <span className={styles.header}>{"Kies uw pizza's"}</span>
             {pizzas.map((pizza, index) => (
-                <PizzaSelectorMobile key={index} pizza={pizza} removePizza={removePizza} updatePizza={updatePizza} index={index}/>
+                <PizzaSelectorMobile key={index} pizza={pizza} removePizza={removePizza} updatePizza={updatePizza} index = {index}/>
                 )
             )}
                 {pizzas.length <4 ?
-                    <Button className={styles.addButton} onClick={() => addPizza({name: "Margherita", ingredients: "Tomatensaus, Mozarella, Basilicum", imageSource: "pizzaMargherita.png", price: 9.99, nickname: "Kaas", vegan: true})}>
+                    <Button className={styles.addButton} onClick={() => addPizza(null)}>
                 +
             </Button>
                     :<></>}

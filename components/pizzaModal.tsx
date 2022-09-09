@@ -65,7 +65,7 @@ export const PizzaModal = (props : PizzaModalProps) => {
                <PizzaSelector key={index} pizza={pizza} removePizza={removePizza} updatePizza={updatePizza}/>
             ))}
             {pizzas.length <4 ?
-            <Button className={styles.addButton} onClick={() => addPizza({name: "Margherita", ingredients: "Tomatensaus, Mozarella, Basilicum", imageSource: "pizzaMargherita.png", price: 9.99, nickname: "Kaas", vegan: true})}>
+            <Button className={styles.addButton} onClick={() => addPizza(null)}>
                 +
             </Button>
             :<></>}

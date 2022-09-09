@@ -5,10 +5,15 @@ import {Header, HeaderOption} from "../../components/header";
 import styles from "/styles/desktop/Menu.module.css";
 import {PizzaMenuItem} from "../../components/pizzaMenuItem";
 import {Footer} from "../../components/footer";
+import {MenuProps} from "./menuMobile";
 
-export const MenuDesktop = () => {
+export const MenuDesktop = (props: MenuProps) => {
+    const {
+        pizzas
+    } = props
     const pizzaExamples: Pizza[] =
         [{
+            id: "1",
             name: "Margherita",
             ingredients: "Tomatensaus, Mozarella, Basilicum",
             imageSource: "pizzaMargherita.png",
@@ -17,6 +22,7 @@ export const MenuDesktop = () => {
             vegan: true
         },
             {
+                id: "2",
                 name: "Prociuto",
                 ingredients: "Tomatensaus, Mozarella, Ham",
                 imageSource: "pizza.png",
@@ -25,6 +31,7 @@ export const MenuDesktop = () => {
                 vegan: false
             },
             {
+                id: "3",
                 name: "Salame",
                 ingredients: "Tomatensaus, Mozarella, Spinata Romana",
                 imageSource: "pizzaSalame.png",
@@ -33,6 +40,7 @@ export const MenuDesktop = () => {
                 vegan: false
             },
             {
+                id: "4",
                 name: "Margherita",
                 ingredients: "Tomatensaus, Mozarella, Basilicum",
                 imageSource: "pizzaMargherita.png",
@@ -41,6 +49,7 @@ export const MenuDesktop = () => {
                 vegan: true
             },
             {
+                id: "5",
                 name: "Prociuto",
                 ingredients: "Tomatensaus, Mozarella, Ham",
                 imageSource: "pizza.png",
@@ -49,6 +58,7 @@ export const MenuDesktop = () => {
                 vegan: false
             },
             {
+                id: "6",
                 name: "Salame",
                 ingredients: "Tomatensaus, Mozarella, Spinata Romana",
                 imageSource: "pizzaSalame.png",
@@ -57,6 +67,7 @@ export const MenuDesktop = () => {
                 vegan: false
             },
             {
+                id: "7",
                 name: "Margherita",
                 ingredients: "Tomatensaus, Mozarella, Basilicum",
                 imageSource: "pizzaMargherita.png",
@@ -65,6 +76,7 @@ export const MenuDesktop = () => {
                 vegan: true
             },
             {
+                id: "8",
                 name: "Prociuto",
                 ingredients: "Tomatensaus, Mozarella, Ham",
                 imageSource: "pizza.png",
@@ -73,6 +85,7 @@ export const MenuDesktop = () => {
                 vegan: false
             },
             {
+                id: "9",
                 name: "Salame",
                 ingredients: "Tomatensaus, Mozarella, Spinata Romana",
                 imageSource: "pizzaSalame.png",
@@ -81,7 +94,7 @@ export const MenuDesktop = () => {
                 vegan: false
             }]
 
-    const [pizzaMenu, setPizzaMenu] = useState<Pizza[]>(pizzaExamples)
+    const [pizzaMenu, setPizzaMenu] = useState<Pizza[]>(pizzas)
     const updatePizzaMenu = (pizzas: Pizza[]) => {
         setPizzaMenu(pizzas)
     }
