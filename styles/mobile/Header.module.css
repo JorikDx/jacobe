@@ -1,10 +1,19 @@
-.menu {
-    /*position: fixed;*/
-    /*top: 5%;*/
+.menu,
+.menuShadow{
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     align-items: center;
+    position: fixed;
+    top: 0;
+    background: #fffdf3;
+    z-index: 999;
+    padding-bottom: .5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.menuShadow{
+    box-shadow: 0 3px 4px 2px #99999952;
 }
 
 .menuLogo {

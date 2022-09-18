@@ -2,6 +2,7 @@ import styles from "/styles/desktop/Header.module.css"
 import {Button, Image} from "antd";
 import Link from "next/link";
 import Logo from "./logo";
+import {useEffect, useState} from "react";
 
 
 export enum HeaderOption {
@@ -13,11 +14,22 @@ export type HeaderProps = {
 }
 
 export const Header = (props: HeaderProps) => {
+    const [shadow, setShadow] = useState(false);
+
     const {
         option
     } = props
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.addEventListener("scroll", () =>
+                setShadow(window.pageYOffset > 20)
+            );
+        }
+    }, []);
+
     return (
-        <div className={styles.container}>
+        <div className={shadow ? styles.containerShadow : styles.container}>
             <div className={styles.logoContainer}>
                 <Link href={"/"}>
                     <Image className={styles.logo} src={"/logo_full_orange.svg"} height={"75px"} width={"250px"}

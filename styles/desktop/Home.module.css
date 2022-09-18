@@ -7,19 +7,15 @@
   background-image: url("/homeBackground.png");
   background-size: cover;
   background-position: center;
+  /*margin-top: 50px;*/
 }
 
 .main {
-  /* Full height */
   min-height: calc(100vh - 70px);
-  /* Center and scale the image nicely */
   color: #fafafa;
   padding-bottom: 4rem;
   display: flex;
-  /*display: flex;*/
-  /*flex-direction: row;*/
   align-items: center;
-  /*justify-content: space-around;*/
 
 }
 

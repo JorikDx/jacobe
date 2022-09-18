@@ -12,13 +12,13 @@ export const AboutUsMobile = () => {
         <>
             <Head>
                 <title>Over ons</title>
-                <meta name="Over ons" content="width=device-width, initial-scale=1.0"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" href="/logo_orange.svg"/>
             </Head>
             <HeaderMobile option={HeaderOption.AboutUs}/>
             <div className={styles.body}>
                 <span className={styles.pageTitle}>Over ons</span>
-                <Carousel className={styles.carousel} autoplay arrows effect={"fade"} adaptiveHeight={false}>
+                <Carousel className={styles.carousel} autoplay effect={"fade"} adaptiveHeight={false}>
                     <div>
                         <Image src={"/carousel/aboutUs1.jpeg"} height={"50vh"} width={"85vw"} className={styles.carouselImage} preview={false}/>
                     </div>

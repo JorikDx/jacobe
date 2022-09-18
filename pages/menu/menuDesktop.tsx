@@ -102,7 +102,7 @@ export const MenuDesktop = (props: MenuProps) => {
         <>
             <Head>
                 <title>Menu</title>
-                <meta name="Menu" content="width=device-width, initial-scale=1.0"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" href="/logo_orange.svg"/>
             </Head>
             <Header option={HeaderOption.Menu}/>

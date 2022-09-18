@@ -4,7 +4,7 @@ import {faBars, faXmark} from "@fortawesome/free-solid-svg-icons";
 import {HeaderOption} from "../header";
 import {Image, Modal} from "antd";
 import Link from "next/link";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export type HeaderMobileProps = {
     option: HeaderOption
@@ -15,10 +15,11 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
         option
     } = props
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [shadow, setShadow] = useState(false);
+
 
     const showModal = () => {
         setIsModalOpen(true);
-        window.scrollTo(0, 0);
     };
 
     const handleOk = () => {
@@ -29,38 +30,24 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
         setIsModalOpen(false);
     };
 
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.addEventListener("scroll", () =>
+                setShadow(window.pageYOffset > 20)
+            );
+        }
+    }, []);
+
     return (
         <>
-            <div className={option === HeaderOption.Home ? styles.menuLogo : styles.menu}>
-                {/*<div className={styles.menuLeft}>*/}
-                {/*    <Link href={"/navigation"}>*/}
-                {/*    <FontAwesomeIcon icon={faBars} color={'#FFB800'} size={"3x"}/>*/}
-                {/*    </Link>*/}
-                {/*</div>*/}
-                {/*{option === HeaderOption.Home ? (*/}
-                {/*    <>*/}
-                {/*    <div className={styles.logo}>*/}
-                {/*            <Image src={"/logo_full_orange.svg"} width={"180px"} height={"50px"}/>*/}
-                {/*        </div>*/}
-                {/*    <div className={styles.menuLogoRight}>*/}
-                {/*        <span>Hoi</span>*/}
-                {/*    </div>*/}
-                {/*    </>*/}
-                {/*    )*/}
-                {/*    :*/}
-                {/*    <div className={styles.menuRight}>*/}
-                {/*        <Link href={"/"}>*/}
-                {/*        <Image src={'/logo_orange_header.svg'} width={"36px"} height={'36px'}/>*/}
-                {/*        </Link>*/}
-
-
+            <div className={option === HeaderOption.Home ? styles.menuLogo : shadow ? styles.menuShadow : styles.menu}>
                 <div className={styles.menuLeft}>
                     <FontAwesomeIcon icon={faBars} color={'#FFB800'} size={"3x"} onClick={showModal}/>
                 </div>
                 {option === HeaderOption.Home ? (
                         <>
                             <div className={styles.logo}>
-                                <Image src={"/logo_full_orange.svg"} width={"180px"} height={"50px"}/>
+                                <Image src={"/logo_full_orange.svg"} preview={false} width={"180px"} height={"50px"}/>
                             </div>
                             <div className={styles.menuLogoRight}>
                                 <span>Hoi</span>
@@ -70,7 +57,7 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
                     :
                     <div className={styles.menuRight}>
                         <Link href={"/"}>
-                            <Image src={'/logo_orange_header.svg'} width={"36px"} height={'36px'} preview={false}/>
+                            <Image src={'/logo_orange.svg'} width={"36px"} height={'36px'} preview={false}/>
                         </Link>
                     </div>}
             </div>
@@ -83,19 +70,19 @@ export const HeaderMobile = (props: HeaderMobileProps) => {
                     </div>
                     <div className={styles.menuContainer}>
                         <Link href={"/menu"}>
-                            <span style={option === HeaderOption.Menu ? {fontWeight: "bold"} : {}}>Menu</span>
+                            <span style={option === HeaderOption.Menu ? {fontWeight: "500", background: "#FFB800", borderRadius: "4px"} : {}}>Menu</span>
                         </Link>
                         <Link href={"/aboutUs"}>
-                            <span style={option === HeaderOption.AboutUs ? {fontWeight: "bold"} : {}}>Over ons</span>
+                            <span style={option === HeaderOption.AboutUs ? {fontWeight: "500", background: "#FFB800", borderRadius: "4px"} : {}}>Over ons</span>
                         </Link>
                         <Link href={"/menu"}>
-                            <span style={option === HeaderOption.Catering ? {fontWeight: "bold"} : {}}>Catering</span>
+                            <span style={option === HeaderOption.Catering ? {fontWeight: "500", background: "#FFB800", borderRadius: "4px"} : {}}>Catering</span>
                         </Link>
                         <Link href={"/contact"}>
-                            <span style={option === HeaderOption.Contact ? {fontWeight: "bold"} : {}}>Contact</span>
+                            <span style={option === HeaderOption.Contact ? {fontWeight: "500", background: "#FFB800", borderRadius: "4px"} : {}}>Contact</span>
                         </Link>
                         <Link href={"/reserve"}>
-                            <span style={option === HeaderOption.Reserve ? {fontWeight: "bold"} : {}}>Reserveren</span>
+                            <span style={option === HeaderOption.Reserve ? {fontWeight: "500", background: "#FFB800", borderRadius: "4px"} : {}}>Reserveren</span>
                         </Link>
                     </div>
                 </div>

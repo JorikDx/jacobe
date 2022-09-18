@@ -25,11 +25,11 @@ export const ReserveDesktop = () => {
         let tempPizzaString = ""
         updatedPizzas.forEach((pizza) => {
             if (updatedPizzas.indexOf(pizza) === updatedPizzas.length - 1 && pizza !== null) {
-                tempPizzaString += pizza.nickname
+                tempPizzaString += pizza.name
                 setPizzaString(tempPizzaString)
             } else {
                 if (pizza !== null) {
-                    tempPizzaString += pizza.nickname + ", "
+                    tempPizzaString += pizza.name + ", "
                     setPizzaString(tempPizzaString)
                 }
             }
@@ -114,7 +114,7 @@ export const ReserveDesktop = () => {
             <div className={styles.container}>
                 <Head>
                     <title>Reserveren</title>
-                    <meta name="Reserveren" content="width=device-width, initial-scale=1.0"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                     <link rel="icon" href="/logo_orange.svg"/>
                 </Head>
                 <main className={styles.main}>
@@ -130,11 +130,11 @@ export const ReserveDesktop = () => {
                     <div className={styles.formInputs}>
                         <div className={styles.inputContainer}>
                             <label className={styles.inputTitle}>Naam</label>
-                            <Input className={styles.input}/>
+                            <Input className={styles.input} autoComplete={"name"}/>
                         </div>
                         <div className={styles.inputContainer}>
                             <label className={styles.inputTitle}>Email</label>
-                            <Input className={styles.input}/>
+                            <Input className={styles.input} autoComplete={"email"}/>
                         </div>
                         <div className={styles.inputContainer}>
                             <label className={styles.inputTitle}>Telefoon
@@ -143,7 +143,7 @@ export const ReserveDesktop = () => {
                                     <FontAwesomeIcon icon={faCircleInfo} color={"#FFB800"} size={"xs"}/>
                                 </Tooltip>
                             </label>
-                            <Input type={"text"} className={styles.input}/>
+                            <Input type={"text"} className={styles.input} autoComplete={"phone"}/>
                         </div>
 
                         <div className={styles.inputContainer}>
@@ -184,13 +184,14 @@ export const ReserveDesktop = () => {
                         <div className={"checkBoxWrapper"}>
                             <Checkbox className={styles.checkBox}>Houd me op de hoogte voor het volgende bak moment</Checkbox>
                         </div>
+                        <Button className={styles.reserveButton}>
+                            <div className={styles.reserveButtonContainer}>
+                                <span className={styles.pizzaButtonText}>Reserveren</span>
+                                <FontAwesomeIcon className={styles.pizzaButtonIcon} icon={faBellConcierge}/>
+                            </div>
+                        </Button>
                     </div>
-                    <Button className={styles.reserveButton}>
-                        <div className={styles.reserveButtonContainer}>
-                            <span className={styles.pizzaButtonText}>Reserveren</span>
-                            <FontAwesomeIcon className={styles.pizzaButtonIcon} icon={faBellConcierge}/>
-                        </div>
-                    </Button>
+
                 </main>
                 <Footer/>
             </div>

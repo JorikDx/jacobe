@@ -8,18 +8,33 @@
     background: #FFDC82;
 }
 
+.footerHome{
+    flex: 1 1;
+    padding: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    background: #ffdc82;
+}
+
 .iconContainer{
     display: flex;
     justify-content: space-evenly;
 }
 
+.iconContainerHome{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+}
+
 .footerIcon{
-    /*margin-right: 1rem;*/
-    /*margin-left: 1rem;*/
     color: #FFFDF3;
     font-size: 2rem;
     transition: all 0.2s ease-in-out ;
 }
+
+
 
 .reserveButton {
     background: #FFFDF3;
@@ -50,10 +65,3 @@
 
 }
 
-/*.footerIcon:hover{*/
-/*    margin-right: 1rem;*/
-/*    margin-left: 1rem;*/
-/*    color: #ff9900;*/
-/*    cursor: pointer;*/
-/*    font-size: 2.5rem;*/
-/*}*/

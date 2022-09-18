@@ -1,9 +1,21 @@
-.container {
+.container,
+.containerShadow{
     display: grid;
     grid-template-columns: 20% 50% 30%;
     /*grid-template-columns: 1fr 2fr 1fr;*/
     padding-top: 1rem;
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: #FFFDF3;
+    padding-bottom: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.containerShadow {
+    box-shadow: 0 3px 4px 2px #99999952;
+
 }
 
 .logo {
@@ -20,7 +32,9 @@
 }
 
 .menuItemSelected {
-    font-weight: bold;
+    font-weight: 500;
+    background: #FFB800;
+    border-radius: 4px;
 }
 
 .menuItem {
@@ -30,6 +44,7 @@
 
 .menuItem:hover {
     font-weight: bold;
+    padding: 0;
     cursor: pointer;
 }
 
@@ -37,8 +52,8 @@
 .reserveButton:disabled:hover {
     width: 290px;
     height: 70px;
-    background: #ff9900;
-    color: white;
+    background: #ff99005c !important;
+    color: white !important;
     font-size: 24px;
     font-weight: bold;
     border-radius: 50px;

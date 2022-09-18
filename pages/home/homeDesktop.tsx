@@ -12,7 +12,7 @@ export const HomeDesktop = () =>{
         <>
             <Head>
                 <title>Jacobé</title>
-                <meta name="Home" content="width=device-width, initial-scale=1.0"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" href="/logo_orange.svg"/>
             </Head>
             <div className={styles.wrapper}>

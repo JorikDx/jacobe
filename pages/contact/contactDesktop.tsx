@@ -7,13 +7,14 @@ import {faInstagram, faWhatsapp} from "@fortawesome/free-brands-svg-icons";
 import {Footer} from "../../components/footer";
 import React from "react";
 import Head from "next/head";
+const { TextArea } = Input;
 
 export const ContactDesktop = () => {
     return(
         <>
             <Head>
                 <title>Contact</title>
-                <meta name="Contact" content="width=device-width, initial-scale=1.0"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" href="/logo_orange.svg"/>
             </Head>
             <div className={styles.wrapper}>
@@ -33,7 +34,7 @@ export const ContactDesktop = () => {
                         </div>
                         <div className={styles.inputContainer}>
                             <label className={styles.inputTitle}>Vraag</label>
-                            <Input className={styles.input}/>
+                            <TextArea rows={4} className={styles.input}/>
                         </div>
                         <Button className={styles.sendButton}>
                             {"Versturen"}
@@ -58,10 +59,10 @@ export const ContactDesktop = () => {
                                 <span>@jacobe_pizza</span>
                             </div>
                             </a>
-                            <a href={"mailto:jacobee.socialmedia@gmail.com"}>
+                            <a href={"mailto:info@jacobe.nl"}>
                             <div className={styles.infoContainer} >
                                 <FontAwesomeIcon icon={faEnvelope} size={"2x"} className={styles.infoIcon}/>
-                                <span>jacobee@gmail.com</span>
+                                <span>info@jacobe.nl</span>
                             </div>
                             </a>
                             <div className={styles.infoContainer}>

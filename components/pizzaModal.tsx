@@ -62,7 +62,7 @@ export const PizzaModal = (props : PizzaModalProps) => {
         <Modal title={<span className={styles.header}>{"Kies uw pizza's"}</span>} centered className={styles.modal} visible={isModalVisible} onOk={handleOk} onCancel={handleOk} width={"1000px"} bodyStyle={{background: "#FFFDF3"}} footer={<Footer/>} style={{padding: "0 !important"}}>
         <div className={styles.container}>
             {pizzas.map((pizza, index) => (
-               <PizzaSelector key={index} pizza={pizza} removePizza={removePizza} updatePizza={updatePizza}/>
+               <PizzaSelector key={index} pizza={pizza} removePizza={removePizza} updatePizza={updatePizza} last={index+1 == pizzas.length}/>
             ))}
             {pizzas.length <4 ?
             <Button className={styles.addButton} onClick={() => addPizza(null)}>

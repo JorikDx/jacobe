@@ -3,7 +3,6 @@
 }
 
 .wrapper {
-  min-height: calc(100vh);
   background-image: url("../../public/HomeBackgroundMobile.png");
   background-size: cover;
   background-position: center;
@@ -47,14 +46,14 @@
 }
 
 .title{
-  font-size: 40px;
+  font-size: 36px;
   color: #FFB800;
   font-weight: bolder;
   margin-bottom: 0;
 }
 
 .subtitle{
-  font-size: 32px;
+  font-size: 28px;
   color: #FFD361;
   font-weight: bolder;
   margin-top: 0;
@@ -80,11 +79,11 @@
 }
 
 .reserveButton {
-  width: 80%;
-  height: 56px;
+  width: 60%;
+  height: 50px;
   background: #FFB800;
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 50px;
   border: none;
@@ -96,3 +95,4 @@
   color: white;
   border: none;
 }
+

@@ -6,6 +6,8 @@ import 'antd/dist/antd.css';
 config.autoAddCss = false
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
+import {Router} from "../components/routes";
+import {BrowserRouter} from "react-router-dom";
 function MyApp({ Component, pageProps }: AppProps) {
   // Import the functions you need from the SDKs you need
 // TODO: Add SDKs for Firebase products that you want to use
@@ -26,7 +28,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   const app = initializeApp(firebaseConfig)
   const database = getDatabase(app);
 
-  return <Component {...pageProps} />
+  return (
+      <>
+        {/*<BrowserRouter>*/}
+        {/*<Router/>*/}
+        {/*</BrowserRouter>*/}
+      <Component {...pageProps} />
+      </>
+  )
 }
 
 export default MyApp

@@ -69,7 +69,7 @@ export const PizzaModalMobile = (props : PizzaModalProps) => {
             <div className={styles.container}>
             <span className={styles.header}>{"Kies uw pizza's"}</span>
             {pizzas.map((pizza, index) => (
-                <PizzaSelectorMobile key={index} pizza={pizza} removePizza={removePizza} updatePizza={updatePizza} index = {index}/>
+                <PizzaSelectorMobile key={index} pizza={pizza} removePizza={removePizza} updatePizza={updatePizza} index={index} last={index+1 == pizzas.length}/>
                 )
             )}
                 {pizzas.length <4 ?

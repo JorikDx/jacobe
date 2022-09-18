@@ -9,14 +9,16 @@ export type PizzaSelectorProps = {
     pizza: Pizza
     removePizza(pizza: Pizza): void
     updatePizza(oldPizza: Pizza, newPizza: Pizza): void
-    index: number
+    index: number,
+    last: boolean
 }
 export const PizzaSelectorMobile = (props: PizzaSelectorProps) => {
     const {
         pizza,
         removePizza,
         updatePizza,
-        index
+        index,
+        last
     } = props
     console.log("pizza input"+ index, pizza)
 
@@ -82,11 +84,9 @@ export const PizzaSelectorMobile = (props: PizzaSelectorProps) => {
 
     return (
         <>
-            {console.log("pizza" + index, updatedPizza)}
-            {console.log("pizzaOld" + index, pizza)}
         <div className={styles.pizzaContainer}>
             <div className={"selectContainer"}>
-                <Select value={updatedPizza !== null ? updatedPizza.name: ""} bordered={false} className={styles.select}
+                <Select value={updatedPizza !== null ? updatedPizza.name: ""} bordered={false} defaultOpen={last} className={styles.select}
                         onChange={handleChange}>
                     <Option value="" disabled selected hidden><span className={styles.option}>Selecteer</span></Option>
                     <Option value="Margherita"><span className={styles.option}>Margherita</span></Option>

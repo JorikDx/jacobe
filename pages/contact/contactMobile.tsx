@@ -9,13 +9,14 @@ import React from "react";
 import Head from "next/head";
 import {HeaderMobile} from "../../components/mobile/header";
 import {FooterMobile} from "../../components/mobile/footer";
+const { TextArea } = Input;
 
 export const ContactMobile = () => {
     return(
         <>
             <Head>
                 <title>Contact</title>
-                <meta name="Contact" content="width=device-width, initial-scale=1.0"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" href="/logo_orange.svg"/>
             </Head>
             <div className={styles.wrapper}>
@@ -35,7 +36,7 @@ export const ContactMobile = () => {
                         </div>
                         <div className={styles.inputContainer}>
                             <label className={styles.inputTitle}>Vraag</label>
-                            <Input className={styles.input}/>
+                            <TextArea rows={4} className={styles.textArea}/>
                         </div>
                         <Button className={styles.sendButton}>
                             {"Versturen"}
@@ -48,19 +49,25 @@ export const ContactMobile = () => {
                 Info
             </span>
                         <div className={styles.infoForm}>
+                            <a style={{color: "#000000d9"}} href={"https://wa.me/31655025356"}>
                             <div className={styles.infoContainer}>
                                 <FontAwesomeIcon icon={faWhatsapp} size={"2x"} className={styles.infoIcon}/>
                                 <span>06-55025356</span>
                             </div>
+                            </a>
+                            <a style={{color: "#000000d9"}} href={"https://www.instagram.com/jacobe_pizza/"}>
                             <div className={styles.infoContainer}>
                                 <FontAwesomeIcon icon={faInstagram} size={"2x"} className={styles.infoIcon}/>
                                 <span>@jacobe_pizza</span>
                             </div>
+                            </a>
+                            <a style={{color: "#000000d9"}} href={"mailto:info@jacobe.com"}>
                             <div className={styles.infoContainer}>
                                 <FontAwesomeIcon icon={faEnvelope} size={"2x"} className={styles.infoIcon}/>
                                 <span>jacobee@gmail.com</span>
                             </div>
-                            <div className={styles.infoContainer}>
+                        </a>
+                        <div className={styles.infoContainer}>
                                 <FontAwesomeIcon icon={faLocationDot} size={"2x"} color={"#FFB800"} style={{paddingLeft: ".3rem", marginRight : "1.3rem"}}/>
                                 <span>Zie reservering</span>
                             </div>

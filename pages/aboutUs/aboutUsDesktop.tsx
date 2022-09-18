@@ -10,12 +10,12 @@ export const AboutUsDesktop = () =>{
         <>
             <Head>
                 <title>Over ons</title>
-                <meta name="Over ons" content="width=device-width, initial-scale=1.0"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" href="/logo_orange.svg"/>
             </Head>
             <Header option={HeaderOption.AboutUs}/>
             <div className={styles.body}>
-                <Carousel className={styles.carousel} autoplay arrows effect={"fade"} adaptiveHeight={false}>
+                <Carousel className={styles.carousel} autoplay effect={"fade"} adaptiveHeight={false}>
                     <div>
                         <Image src={"/carousel/aboutUs1.jpeg"} height={"50vh"} width={"50vw"} className={styles.carouselImage} preview={false}/>
                     </div>

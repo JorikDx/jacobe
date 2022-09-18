@@ -38,7 +38,7 @@
 }
 
 .header {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 900;
     color: #FFD361;
     text-decoration: underline;
@@ -57,7 +57,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     height: 100px;
 }

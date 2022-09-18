@@ -9,12 +9,14 @@ export type PizzaSelectorProps = {
     pizza: Pizza
     removePizza(pizza: Pizza): void
     updatePizza(oldPizza: Pizza, newPizza: Pizza): void
+    last: boolean
 }
 export const PizzaSelector = (props: PizzaSelectorProps) => {
     const {
         pizza,
         removePizza,
-        updatePizza
+        updatePizza,
+        last
     } = props
 
     const pizzaExamples: Pizza[] =
@@ -83,7 +85,7 @@ export const PizzaSelector = (props: PizzaSelectorProps) => {
             <Image src={updatedPizza !== null ? updatedPizza.imageSource : "pizzaUnknown.png"} width={"200px"} height={"200px"}
                    className={styles.image} preview={false}/>
             <div className={"selectContainer"}>
-                <Select value={updatedPizza !== null ? updatedPizza.name: ""} bordered={false} className={styles.select}
+                <Select value={updatedPizza !== null ? updatedPizza.name: ""} defaultOpen={last} bordered={false} className={styles.select}
                         onChange={handleChange}>
                     <Option value="" disabled selected hidden><span className={styles.option}>Selecteer</span></Option>
                     <Option value="Margherita"><span className={styles.option}>Margherita</span></Option>
